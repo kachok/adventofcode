@@ -1,0 +1,48 @@
+Bb => Bb 4
+Ca => Ca 4
+Ca => Ca 2
+Ca => Ca 5
+Pp => Pp 5
+
+452/2 226 + 20
+
+Th => ThCa
+Ti => BbPp
+Ti => TiTi
+Al => ThFf
+Al => ThRnFfAr
+Bb => BbCa
+Bb => TiBb
+Ca => CaCa
+Ca => PpBb
+Ca => SiTh
+Ff => CaFf
+Ff => PpMg
+Ff => SiAl
+Hh => CRnAlAr
+Hh => CRnFfYFfYFfAr
+Hh => CRnFfYMgAr
+Hh => CRnMgYFfAr
+Hh => HhCa
+Hh => NnRnFfYFfAr
+Hh => NnRnMgAr
+Hh => NnTh
+Hh => OoBb
+Hh => OoRnFfAr
+Mg => BbFf
+Mg => TiMg
+Nn => CRnFfAr
+Nn => HhSi
+Oo => CRnFfYFfAr
+Oo => CRnMgAr
+Oo => HhPp
+Oo => NnRnFfAr
+Oo => OoTi
+Pp => CaPp
+Pp => PpTi
+Si => CaSi
+e => HhFf
+e => NnAl
+e => OoMg
+
+OoRnPpBbPpMgArCaCaCaSiThCaCaSiThCaCaPpBbPpRnFfArCaCaSiThCaCaSiThCaCaCaCaCaCaCaCaCaSiRnPpTiTiBbFfYPpBbFfArSiRnCaSiRnBbSiAlArPpTiBbPpTiRnCaSiAlArCaPpTiTiBbPpMgYFfArPpBbSiRnCaCaFfArRnCaFfArCaSiRnCaFfYCaCaCaCaSiThCaPpBbCaCaCaCaSiThCaSiRnTiMgArFfArSiThSiThCaCaCaCaCaPpTiBbPpTiRnCaSiAlArCaPpBbPpBbPpBbCaCaSiThCaPpBbSiThCaSiThCaSiThCaSiThCaPpTiBbCaCaCaCaPpBbCaCaPpBbSiRnBbCaCaSiRnCaCaCaSiThCaRnCaFfArYCaPpBbCaCaCaSiThFfArPpBbFfArCaPpRnCaCaCaFfArPpTiRnPpMgArFf
