@@ -2,3 +2,5 @@
 .DS_Store
 
 *.beam
+
+2017/day03-rust/*
