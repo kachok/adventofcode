@@ -4,3 +4,10 @@
 *.beam
 
 2017/day03-rust/*
+2017/day05-ada/*
+!2017/day05-ada/
+!2017/day05-ada/*.*
+
+*.ali
+
+*.o
