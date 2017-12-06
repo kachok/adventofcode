@@ -6,7 +6,7 @@ import (
     "strings"
     "math"
     "strconv"
-    "os"
+    //"os"
 )
 
 func main() {
@@ -33,6 +33,7 @@ func main() {
     fwd=0
     side=0
 
+	Loop:
     for i:=0; i<len(items);i++ {
     	el:=items[i]
     	dir:=string(el[0])
@@ -48,34 +49,46 @@ func main() {
     			heading=int(math.Mod(float64(360+heading+90), 360))
     	}
 
+		fmt.Print("\n")		
+		fmt.Print("heading: ",heading,"\n")		
+		fmt.Print("heading parse: ", el, " ", blocks, "\n")
+
+		places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]=1
+		
     	//need to add every step of the way (block) to the map
     	switch heading {
     		case 0:
-    			//for i:=0; i<blocks;i++ {
-    			//	fwd=fwd+1
-    			//	places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]=1
-    			//}
-    			fwd=fwd+blocks
+    			for i:=0; i<blocks;i++ {
+					fmt.Print("blocks: ", i," ", blocks, " ", fwd, " ", side, "\n")
+					fwd=fwd+1
+					if places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]==1 {break Loop;}
+    				places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]=1
+    			}
+    			//fwd=fwd+blocks
     		case 90:
-    			side=side+blocks
+    			for i:=0; i<blocks;i++ {
+					fmt.Print("blocks: ", i," ", blocks, " ", fwd, " ", side, "\n")
+					side=side+1
+					if places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]==1 {break Loop;}
+    				places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]=1
+    			}
     		case 180:
-    			fwd=fwd-blocks
+    			for i:=0; i<blocks;i++ {
+					fmt.Print("blocks: ", i," ", blocks, " ", fwd, " ", side, "\n")
+					fwd=fwd-1
+					if places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]==1 {break Loop;}
+    				places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]=1
+    			}
     		case 270:
-    			side=side-blocks
+    			for i:=0; i<blocks;i++ {
+					fmt.Print("blocks: ", i," ", blocks, " ", fwd, " ", side, "\n")
+					side=side-1
+					if places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]==1 {break Loop;}
+    				places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]=1
+    			}
     	}
 
-    	if val, ok := places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]; ok {
-    		val=val+1
-    		//do something here
-    		//fmt.Println(val)
-    		fmt.Println(">>>>> ", el, " ", dir, " ", blocks, " ", heading, " ", fwd, " ", side, "\n")
 
-    		fmt.Print("blocks away: ", fwd+side, "\n")
-    		os.Exit(0)
-
-		}
-
-		places[strconv.Itoa(fwd)+":"+strconv.Itoa(side)]=1
 
 		fmt.Println(strconv.Itoa(fwd)+":"+strconv.Itoa(side))
 
