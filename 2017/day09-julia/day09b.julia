@@ -1,0 +1,61 @@
+ s=""
+f=open("day09.input")
+s = readlines(f)
+close(f)
+
+total=0
+curr_score=0
+ignore=false
+garbage=false
+
+gc=0
+
+for char in s[1]
+    println(">> processing - ",char)
+    if (ignore==true)
+        println("ignore==true")
+        ignore=false
+        continue
+    end
+
+    if (char=='!')
+        println("char=='!'")
+        ignore=true
+        continue
+    end
+
+    if (!garbage && char=='<')
+        println("!garbage && char=='<'")
+        garbage=true
+        continue
+    end
+
+    if (garbage && char=='>')
+        println("garbage && char=='>'")
+        garbage=false
+        continue
+    end
+
+    if (garbage==true)
+        println("garbage==true")
+        gc=gc+1
+        continue
+    end
+
+    if (char=='{') 
+        println("char=='{'")
+        curr_score=curr_score+1
+        total=total+curr_score
+    end
+
+    if (char=='}')
+        println("char=='}'")
+        curr_score=curr_score-1
+        
+        #println(char)
+    end
+    
+    println("total: ",total, " current: ", curr_score)
+end
+
+println("answer: ", gc)
