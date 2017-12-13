@@ -1,4 +1,4 @@
-# adventofcode
+# adventofcode :christmas_tree: :gift: :calendar:
 Advent of Code http://adventofcode.com
 
 
