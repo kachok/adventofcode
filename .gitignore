@@ -17,3 +17,5 @@
 *.class
 
 *.exe
+
+2017/day19-typescript/helloworld/node_modules
