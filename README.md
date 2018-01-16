@@ -15,7 +15,7 @@ In-progress (Go lang)
 
 ## 2017
 
-In-progress (25 languages in 25 days)
+Completed (25 languages in 25 days)
 
 1. Python
 2. Javascript
